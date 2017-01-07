@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>task03</title>
+		<meta charset="UTF-8">
+		<style>
+			*{margin:0; padding: 0;}
+			li{list-style:none;}
+			.g-body{
+				background-color: #eee;
+				padding: 20px;
+				border:1px solid #999;
+				box-sizing: border-box;
+				
+				width: 100%;
+				overflow: hidden;
+			}
+			.g-body .left{
+				border:1px solid #999;
+				background-color: white;
+				padding: 20px;
+				width: 160px;
+
+				float:left;
+				margin-right:20px;
+			}
+			.g-body .left .logo{
+				float:left;
+				border:1px solid #999;
+				background-color: #eee;
+				width: 78px;
+				height: 78px;
+			}
+			.g-body .left p{
+				margin-left: 100px;
+				font-size: 14px;
+			}
+			.g-body .center{
+				border:1px solid #999;
+				background-color: white;
+				padding: 20px;
+				
+				overflow:hidden;
+				 
+			}
+			.g-body .right{
+				border:1px solid #999;
+				background-color: white;
+				box-sizing: border-box;
+				width: 120px;
+				padding: 20px;
+
+				float:right;	
+				margin-left:20px;	
+			}
+			.g-body .right .logo{
+				border:1px solid #999;
+				background-color: #eee;
+				width: 78px;
+				height: 78px;
+				margin-bottom:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="g-body">
+			<div class="left">
+				<div class="logo"></div>
+				<p>左栏标题</p>
+			</div>
+			<div class="right">
+				<ul>
+					<li class="logo"><a href="#"></a></li>
+					<li class="logo"><a href="#"></a></li>
+					<li class="logo"><a href="#"></a></li>
+					<li class="logo"><a href="#"></a></li>
+				</ul>
+			</div> 
+			<div class="center">
+				<p>该页面分为左中右三个模块，左侧为200px宽；中间模块自适应宽度，右侧模块120px宽。</p>
+				<p>左侧和右侧的模块分别向左向右浮动，并保留20px的margin。注意在html部分.left与.right模块要紧挨着写。</p>
+				<p>中间自适应部分使用overflow:hidden消除左右浮动的影响。</p>
+				<p>父元素使用width:100%和overflow:hidden清除子元素浮动带来的影响。但是注意，因为父元素有padding，需设置box-sizing:border-box。</p>
+			</div> 
+		</div>
+	</body>
+</html>
