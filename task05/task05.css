@@ -1,0 +1,171 @@
+
+html,body,ul,li{margin:0;padding: 0;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+h1,h2,h3,h4,h5,h6,p,a,label,select{font:14px "SimHei";}
+html,body{height: 100%;}
+/**
+ * 固定顶栏
+ */
+.header{
+	background-color:#333333;
+	height: 50px;
+	padding: 0 30px;
+	position: fixed;
+	width: 100%;
+}
+.header img{
+	margin-top: 5px;
+}
+.header .nav{
+	float:right;
+	display: inline-block;
+}
+.header .nav ul{
+	display: inline-block;
+}
+.header .nav li{
+	display: inline-block;
+	font:12px "SimHei";
+	list-style: circle;
+	margin-right:5px;
+	line-height: 50px;
+}
+.header .nav a{
+	color:white;
+}
+.header .nav a:hover{
+	color:#ccc;
+}
+/**	
+ * 主体部分
+ */
+
+.wrap{
+	padding:70px 20px 0;
+	background-color: #ccc;
+}
+/**	
+ * 左侧自适应内容区
+ */
+.main{
+	overflow: hidden;
+}
+.main li{
+	background-color: white;
+	padding: 15px;
+	box-shadow:2px 2px #888888;
+	border: 1px solid #f2f1f1;
+	margin-bottom: 20px;
+}
+.main li h1{font-size: 18px; font-weight: bold;}
+.main li h2{font-size: 14px;}
+.main li h3{font-size: 8px; color:#888888;}
+.main li p{line-height: 1.5;}
+.main li .imgs li{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	box-shadow:none;
+	padding: 5px;
+	margin:5px;
+}
+.main li .imgs p{
+	margin:0;
+	text-align: center;
+	line-height: 20px;
+}
+.main li .imgs img{
+	width: 90px;
+	height: 75px;
+	margin:5px 5px;
+}
+.main li .rank li{
+	box-shadow: none;
+	border:none;
+	padding: 0;
+	margin:0;
+}
+.main li table{
+	width: 100%;
+	font:12px "SimHei";
+    border:1px solid #f2f1f1;
+	/*使单元格之间、单元格与表格之间没有间距，border合并*/
+    border-collapse:collapse;
+}
+
+.main li table thead{
+	background-color: black;
+	color:white;
+}
+.main li table th,td{
+	border: 1px solid #f2f1f1;
+}
+.main li table tfoot{
+	background-color: #f2f1f1;
+}
+/**
+ * 右侧固定宽度侧栏
+ */
+.right{
+	background-color:white;
+	box-shadow:2px 2px #888888;
+	width: 350px;
+	margin-left:20px;
+	padding: 20px;
+	box-sizing: border-box;
+	float:right;
+}
+.right .title{
+	border-left: 3px solid #cccccc;
+}
+.right h1{
+	font-size:16px;
+	line-height: 2;
+	margin:5px;
+}
+
+.right .form-group{
+	padding: 3px 10px;
+}
+.right .form-group .control-label{
+	font:12px "SimHei";
+	display: inline-block;
+	width: 100px;
+	text-align:right;
+}
+.right .form-group input{
+	font:12px "SimSun";
+	display: inline-block;
+}
+.right .form-group .input-help{
+	color:#999999;
+	margin-left:110px;
+}
+/*使textarea前的label顶端对齐*/
+.right .form-group .vertical-top{
+	vertical-align: top;
+}
+.right .form-group input[type="submit"]{
+	width: 100%;
+	background-color: #3355D0;
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	font:14px "SimHei";
+	color:white;
+}
+/** 
+ * 底栏
+ */
+.footer{
+	width: 100%;
+	height: 50px;
+	background-color: black;
+}
+/*版权符号好小*/
+.footer p{
+	color:white;
+	font:10px/50px "SimHei";
+	margin:0 auto;
+	text-align: center;
+}
