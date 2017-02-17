@@ -1,0 +1,578 @@
+.container{
+	width: 100%;
+    min-width: 1280px;  //最小宽度
+    font-family: 'Microsoft YaHei';
+}
+/*小部件*/
+.icon{
+	display: inline-block;
+}
+.icon-book{
+	background: url(../img/sprite.png) -153px -0px no-repeat;
+	height: 30px;
+	width: 30px;
+	overflow:hidden;
+}
+.icon-user{
+	background:url(../img/sprite.png) -309px -0px no-repeat;
+	height: 17px;
+	width: 14px;
+}
+.icon-circle{
+	background: url(../img/sprite.png) -0px -0px no-repeat;
+	height: 42px;
+	width: 42px;
+}
+.icon-flower{
+	background: url(../img/sprite.png) -42px -0px no-repeat;
+	height: 40px;
+	width: 35px;
+}
+.icon-flag{
+	background: url(../img/sprite.png) -77px -0px no-repeat;
+	height: 40px;
+width: 35px;
+}
+.icon-rect{
+	background: url(../img/sprite.png) -112px -0px no-repeat;
+	height: 40px;
+	width: 41px;
+}
+.icon-qq{
+	background: url(../img/sprite.png) -184px -0px no-repeat;
+	height: 25px;
+	width: 24px;
+}
+.icon-weibo{
+	background: url(../img/sprite.png) -261px -0px no-repeat;
+	height: 25px;
+	width: 29px;
+}
+.icon-twiter{
+	background: url(../img/sprite.png) -232px -0px no-repeat;
+	height: 25px;
+	width: 29px;
+}
+.icon-brower{
+	background: url(../img/sprite.png) -208px -0px no-repeat;
+	height: 25px;
+	width: 24px;
+}
+.btn{
+	width: 330px;
+	height: 62px;
+	border: none;
+	font-size: 30px;
+	letter-spacing:2px;
+}
+.btn-red{
+	background-color: #e74f4d;
+	color:white;
+}
+.btn-white{
+	background-color: white;
+	color:#e74f4d;
+	border: 1px solid #e74f4d;
+	width: 106px;
+	height: 32px;
+}
+
+/*头部*/
+header{
+	margin:0 55px;
+	height: 60px;
+}
+header .logo{
+	float:left;
+	height: 100%;
+	vertical-align:middle;
+}
+header .logo span{ /*死活调不好了！会影响后面的h1，在父元素上加了垂直居中也没有效果，只能狠心浮动了*/
+	margin-top:15px;
+	float:left;
+}
+header .logo h1{
+	overflow:hidden;
+	display: inline-block;
+	color: #4E3A4F;
+    font-size: 24px;
+    line-height:60px;
+	vertical-align: middle;
+    font-weight: 500;
+    margin-left:10px;
+}
+nav{
+	float:right;
+}
+nav ul{
+	display: inline-block;
+	vertical-align:middle;
+}
+nav ul li{
+	display: inline-block;
+	width: 100px;
+}
+nav ul li a{
+	color:#787b83;
+	font:14px/56px "Microsoft YaHei";
+	text-decoration:none;
+}
+nav ul li .red{
+	color:#e74f4d;
+}
+nav ul li a:hover{
+	color:#e74f4d;
+	text-decoration:none;
+}
+/*section1*/
+#section1{
+	width: 100%;
+	height: 690px;
+	background-image: url(../img/bg-sec1.png);
+	background-size:100% auto; /*!很重要*/
+	position:relative;
+}
+#section1 .content{
+	position: relative;
+	top:200px;
+	left:100px;
+}
+#section1 .content h1{
+	font:50px/100px "arial";
+	color:white;
+}
+#section1 .content p{
+	font-size:20px;
+	line-height: 1.5;
+	color:white;
+}
+#section1 .btn{
+	position:absolute;
+	top:200px;
+}
+#section2{
+	width: 100%;
+	height: 250px;
+}
+#section2 .cell{
+	width: 25%; 
+	float:left;/*这个地方也老调不好,最后一个总是到不了一行来，加了浮动就好了！*/
+	display: inline-block;
+	position: relative;
+    top: 0;
+}
+#section2 p{
+	color:#7f8080;
+	position:absolute;
+	top:130px;
+	box-sizing: border-box;
+	width: 100%;
+	border-right: 2px solid #7f8080;
+	padding:0 80px;
+	text-align: center;
+}
+#section2 span{
+	position:relative;
+	/*top:50%;不管用*/
+	margin-top:46px;
+	margin-left:-20px;
+	left:50%;
+}
+#section3{
+	width: 100%;
+	height: 360px;
+	background-color: #ededec;
+	position: relative;
+	text-align: center;
+}
+#section3 .icon-bigbook{ 
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background: url(../img/icon-bigbook.png) no-repeat;
+	background-size:100% 100%;
+	position: absolute;
+	top:90px;
+}
+#section3 h1{
+	position: relative;
+	top:230px;
+	color:#8f8f8f;
+	font-size:50px;
+	font-weight: normal;
+	text-align: center;
+}
+#section4{
+	height: 340px;
+	background: url(../img/bg-sec4.png) no-repeat;
+	background-size:100% auto;
+	text-align: center;
+	position:relative;
+}
+#section4 .info{
+	position: relative;
+	top:50px;
+}
+#section4 .info h2{
+	color:white;
+	font-size:22px;
+	padding:5px 0;
+}
+#section4 p{
+	color:white;
+	font-size:12px;
+}
+/*
+ *关于这里的Input元素
+ *可以不使用select，只用一个普通input，然后背景用切图切下来
+ *所以还是要重新切图！
+ */
+#section4 .select{
+	width: 100%;
+	position: absolute;
+	top:170px;
+	vertical-align:middle;
+}
+#section4 .select select{
+	width: 240px;
+	height: 40px;
+	border: 0;
+	appearance:none;
+  	-moz-appearance:none;
+  	-webkit-appearance:none;
+  	background: url(../img/icon-select.png)  no-repeat scroll white ;
+  	padding-right: 14px;
+  	padding-left:5px;
+  	cursor:pointer;
+  	color:#b4b5b5;
+  	margin-right:20px;
+}
+select::-ms-expand { display: none; } /*清除原有下拉箭头*/
+#section4 .select .btn-red{
+	width: 240px;
+	height: 40px;
+	font-size: 16px;
+	letter-spacing: 24px;
+    border: 0;
+    cursor:pointer;
+}
+#section5{
+	height: 600px;
+	background-color: #f8f8f7;
+	position:relative;
+	padding-left:140px;
+}
+#section5 .cell{
+	display: inline-block;
+	width: 20%;
+	height: 390px;
+	padding: 20px;
+	position: relative;
+	top:80px;
+	text-align: center;
+}
+#section5 img{
+	background-color: white;
+	height: 310px;
+	border:1px solid #dadada;
+}
+#section5 .info{
+	
+}
+#section5 .info h2{
+	font-size:20px;
+	text-indent:30px;
+	letter-spacing:30px;
+}
+#section5 .info h3{
+	font-size:16px;
+	line-height: 26px;
+}
+#section5 .info p{
+	font-size:12px;
+	line-height: 24px;
+	color:#aeaeaf;
+}
+
+#section6{
+	height: 566px;
+	background-color: white;
+}
+#section6 .left{
+	display: inline-block;
+	width: 66%;
+	height: 100%;
+	background:url(../img/bg-sec6.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+	float:left;
+}
+#section6 .left .info{
+	color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top: 130px;
+}
+#section6 .left .info h2{
+	font-size: 50px;
+}
+#section6 .left .info h1{
+	font-size: 120px;
+	line-height: 150px;
+}
+#section6 .left .info p{
+	font-size: 26px;
+	line-height: 40px;
+}
+#section6 .right{
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	background-color: white;
+
+}
+#section6 .right .wrap{
+	margin:160px auto 0;
+	width: 70%;
+	text-align: center;
+	position: relative;
+}
+#section6 .right h2{
+	font-size: 24px;
+	line-height: 60px;
+}
+#section6 .right h2 span{
+	color:#BE4F48;
+}
+#section6 .right p{
+	white-space: normal;
+	text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+    color: #B3AFAC;
+    margin-bottom: 60px;
+}
+#section6 .point{
+	margin-top:20px;
+	text-align: center;
+}
+#section6 .point span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border:2px solid #dadada;
+	cursor:pointer;
+}
+#section6 .point span:first-child{
+	background-color: #dadada;
+}
+#section7{
+	height: 520px;
+	width: 100%;
+}
+#section7 .cell{
+	display: inline-block;
+	width: 33%;
+	height: 520px;
+	box-sizing: border-box;
+	color:#e74f4d;
+	position: relative;
+	float:left;
+	text-align: center;
+	padding-top: 170px;
+}
+#section7 .cell:first-child{
+	background-color: #e74f4d;
+	color:white;
+}
+
+#section7 .cell p{
+	font-size:22px;
+	line-height: 40px;
+}
+#section7 .cell:first-child button{
+	width: 168px;
+	height: 42px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	background-color: #e74f4d;
+	color:white;
+	border:1px solid white;
+}
+#section7 .cell:nth-child(2) button{
+	width: 168px;
+	height: 42px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	background-color: white;
+	color:#e74f4d;
+	border:1px solid #e74f4d;
+}
+#section7 .cell:last-child{
+	background: url(../img/bg-sec7.png) no-repeat;
+	background-size:  100% auto;
+}
+#section8{
+	height: 750px;
+}
+#section8 .top{
+	height: 300px;
+	width: 100%;
+	text-align: center;
+	padding-top:120px;
+	box-sizing: border-box;
+}
+
+#section8 .top .info h2{
+	font-size: 18px;
+	line-height: 38px;
+}
+#section8 .top .info p{
+	margin-top: 10px;
+	font-size: 14px;
+    color: #B3AFAC;
+}
+#section8 .left{
+	display: inline-block;
+	width: 40%;
+	float:left;
+}
+#section8 .left .info{
+	height: 100px;
+	width: 300px;
+	margin:0 auto;
+}
+#section8 .left .info h3{
+	font-size: 16px;	
+	margin:10px 0;
+}
+#section8 .left .info p{
+	font-size: 12px;
+	line-height: 20px;
+    color: #B3AFAC;
+}
+#section8 .left .info span{
+	font-size:8px;
+	float:right;
+	color:#B3AFAC;
+}
+#section8 .right{
+	display: inline-block;
+	width: 59%;
+	height: 450px;
+	text-align: left;
+}
+#section8 input[type="text"]{
+	width: 310px;
+	height: 40px;
+	border:none;
+	background-color: #ededec;
+	margin:0 20px 20px 0;
+	padding:10px 20px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+#section8 textarea{ /*右下角有个小东西怎么去掉*/
+	width: 640px;
+	height: 120px;
+	border:none;
+	background-color: #ededec;
+	padding:10px 20px;
+	box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+#section8 input[type="submit"]{
+	width: 640px;
+	height: 40px;
+	border:none;
+	background-color: #ededec;
+	cursor: pointer;
+}
+#section9{
+	height: 360px;
+	width: 100%;
+	background-color: #32353e;
+	position: relative;
+	color:white;
+}
+#section9 .info{
+	position: absolute;
+	top:90px;
+	width: 100%;
+	text-align: center;
+	
+}
+#section9 .info h2{
+	font-size: 22px;
+	margin:10px 0;
+}
+#section9 .info p{
+	font-size: 12px;
+	line-height: 20px;
+}
+#section9 .mail{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top:190px;
+	text-align: center;
+	vertical-align:middle;
+	font-size: 0; /*让这两个Input紧紧挨在一起，不知道为什么，缺了这句话就不行*/
+}
+
+#section9 .mail input[type="email"]{
+	width: 400px;
+	height: 40px;
+	background-color: white;
+	padding:0 15px;
+	border:0;
+	font-size: 16px;
+}
+#section9 .mail input[type="email"]:focus{
+	outline: 0;
+} 
+#section9 .mail input[type="submit"]{
+	width: 80px;
+	height: 40px;
+	background-color: #6f7278;
+	color:white;
+	border: 0;
+	letter-spacing: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+#section9 .contact{
+	text-align: center;
+	position: absolute;
+	top:260px;
+	width: 100%;
+	height: 30px;
+}
+#section9 .contact i{
+	margin-right:20px;
+	cursor: pointer;
+}
+footer{
+	height: 60px;
+	background-color: #2f3039;
+	padding:0 40px 0 90px;
+	font-size: 14px;
+	color:white;
+}
+footer .info{
+	float:left;
+	line-height: 60px;
+}
+footer .back{
+	float:right;
+	line-height: 60px;
+}
+footer .back a{
+	text-decoration: none;
+	color:white;
+}
