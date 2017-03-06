@@ -103,19 +103,30 @@ header .logo h1{
 }
 nav{
 	float:right;
+	height: 100%;
 }
 nav ul{
 	display: inline-block;
 	vertical-align:middle;
+	position: relative;
+	height: 100%;
+	font-size:0;
 }
 nav ul li{
 	display: inline-block;
 	width: 100px;
+	vertical-align: middle;
+	text-align: center;
 }
 nav ul li a{
 	color:#787b83;
 	font:14px/56px "Microsoft YaHei";
 	text-decoration:none;
+	vertical-align: middle;
+
+}
+nav ul li span{
+	vertical-align: middle;
 }
 nav ul li .red{
 	color:#e74f4d;
@@ -123,6 +134,30 @@ nav ul li .red{
 nav ul li a:hover{
 	color:#e74f4d;
 	text-decoration:none;
+}
+nav ul .bar{
+	position: absolute;
+	left:0;
+	bottom:0;
+	background-color: #e74f4d;
+	height: 2px;
+	width: 100px;
+	transition:left 0.5s;
+	-moz-transition:width 2s; /* Firefox 4 */
+	-webkit-transition:width 2s; /* Safari and Chrome */
+	-o-transition:width 2s; /* Opera */
+}
+nav ul li:nth-child(2):hover~ .bar{
+	left:100px;
+}
+nav ul li:nth-child(3):hover~ .bar{
+	left:200px;
+}
+nav ul li:nth-child(4):hover~ .bar{
+	left:300px;
+}
+nav ul li:nth-child(5):hover~ .bar{
+	left:400px;
 }
 /*section1*/
 #section1{
