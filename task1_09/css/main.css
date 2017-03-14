@@ -116,6 +116,7 @@ width: 11px;
  */
 .head{
 	width: 1280px;
+	height: 100%;
 	margin:0 auto;
 	box-sizing: border-box;
 	padding:10px 50px;
@@ -123,6 +124,8 @@ width: 11px;
 }
 .head .search{
 	position:relative;
+	height: 100%;
+	margin:6px 0;
 }
 .head .search input{
 	background-color: white;
@@ -143,10 +146,10 @@ width: 11px;
 }
 .head .login{
 	margin-left:30px;
-	vertical-align: middle;
+	height: 100%;
 	color:white;
 	font-size:12px;
-	line-height: 28px;
+	line-height: 40px;
 }
 .head .login span{
 	margin-right:10px;
@@ -210,6 +213,7 @@ aside nav ul li{
 	display: block;
 	padding-left:44px;
 	line-height: 50px;
+	font-size:14px;
 }
 aside nav ul li ul li{
 	padding-left:24px;
