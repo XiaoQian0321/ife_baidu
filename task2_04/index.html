@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>task2_04</title>
+		<style>
+			button{
+				background-color: white;
+				border: 1px solid grey;
+				border-radius: 2px;
+			}
+			#result{
+				margin:10px 0;
+			}
+			#result .num{
+				background-color: red;
+				color:white;
+				margin-right:4px;
+				padding:4px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="input">
+			<button id="left-in">左侧入</button>
+			<button id="right-in">右侧入</button>
+			<button id="left-out">左侧出</button>
+			<button id="right-out">右侧出</button>
+		</div>
+		<div id="result"></div>
+	</body>
+	<script>
+		var result=document.getElementById('result');
+		var leftIn=document.getElementById('left-in');
+		var rightIn=document.getElementById('right-in');
+		var leftOut=document.getElementById('left-out');
+		var rightOut=document.getElementById('right-out');
+		leftIn.onclick=function(){
+			var num=getNum();
+			var numSpan=createNum(num);
+			result.insertBefore(numSpan,result.firstChild);
+		}
+		rightIn.onclick=function(){
+			var num=getNum();
+			var numSpan=createNum(num);
+			result.appendChild(numSpan);
+		}
+		leftOut.onclick=function(){
+			var firstChild=result.removeChild(result.firstChild);
+			console.log(firstChild.innerHTML);
+		}
+		rightOut.onclick=function(){
+			var lastChild=result.removeChild(result.lastChild);
+			console.log(lastChild.innerHTML);
+		}
+
+		function getNum(){
+			var num=document.getElementById("input").value;
+			return num;
+		}
+		function createNum(num){
+			var node=document.createElement("span");
+			node.className="num";
+			node.innerHTML=num;
+			return node;
+		}
+
+	</script>
+</html>
