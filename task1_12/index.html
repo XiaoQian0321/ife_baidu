@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>task12</title>
+		<style>
+			section{
+				margin:20px;
+			}
+			/*表格样式*/
+			table thead td{
+				background-color: black;
+				color:white;
+			}
+			table tbody tr:nth-child(2n){
+				background-color:#dedede;
+			}
+			table tbody tr:nth-child(2n+1){
+				background-color: white;
+			}
+			table tbody tr:nth-child(1),tr:nth-child(2),tr:nth-child(3){
+				color:red;
+			}
+			/*input样式*/
+			input{
+				width: 100px;
+				transition:width 0.5s;
+				-moz-transition:width 0.5s; /* Firefox 4 */
+				-webkit-transition:width 0.5s; /* Safari and Chrome */
+				-o-transition:width 0.5s; /* Opera */
+
+			}
+			input:focus{
+				width: 200px;
+			}
+			/*轮播图样式*/
+			.pic{
+				width: 500px;
+				height: 200px;
+				position:relative;
+				overflow: hidden;
+			}
+			.slider{
+				width: 1500px;
+				height: 200px;
+				list-style: none;
+				margin:0;
+				padding:0;
+				animation:slide 5s; 
+				animation-timing-function: linear;
+				animation-iteration-count:infinite;
+			}
+			@keyframes slide{
+				0% {margin-left:0;}
+				23% {margin-left:0;}
+				33% {margin-left:-500px;}
+				56% {margin-left:-500px;}
+				66% {margin-left:-1000px;}
+				90% {margin-left:-1000px;}
+				100% {margin-left:0;}
+			}
+			.slider li{
+				display: inline-block;
+				width: 500px;
+				height: 200px;
+				float:left;
+			}
+			.slider li:nth-child(1){
+				background-color: green;
+			}
+			.slider li:nth-child(2){
+				background-color: blue;
+			}
+			.slider li:nth-child(3){
+				background-color: yellow;
+			}
+	
+			.pic span{
+				position: absolute;
+				bottom:0;
+				display:inline-block;
+				width: 20px;
+				height: 20px;
+				background-color: rgba(255,255,255,0.5);
+				text-align: center;
+			}
+			.pic span:hover{
+				cursor:pointer;
+			}
+			.pic #p3{
+				right:0;
+			}
+			.pic #p2{
+				right:22px;
+			}
+			.pic #p1{
+				right:44px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<table>
+				<thead>
+					<td>排名</td>
+					<td>网站</td>
+					<td>热度</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td><td>百度前端技术学院</td><td>13000</td>
+					</tr>
+					<tr>
+						<td>2.</td><td>百度前端技术学院</td><td>12000</td>
+					</tr>
+					<tr>
+						<td>3.</td><td>百度前端技术学院</td><td>11000</td>
+					</tr>
+					<tr>
+						<td>4.</td><td>百度前端技术学院</td><td>10000</td>
+					</tr>
+					<tr>
+						<td>5.</td><td>百度前端技术学院</td><td>9000</td>
+					</tr>
+					<tr>
+						<td>6.</td><td>百度前端技术学院</td><td>8000</td>
+					</tr>
+					<tr>
+						<td>7.</td><td>百度前端技术学院</td><td>7000</td>
+					</tr>
+					<tr>
+						<td>8.</td><td>百度前端技术学院</td><td>6000</td>
+					</tr>
+					<tr>
+						<td>9.</td><td>百度前端技术学院</td><td>5000</td>
+					</tr>
+					<tr>
+						<td>10.</td><td>百度前端技术学院</td><td>4000</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<p>点击选中下面输入框：</p>
+			<input type="text">
+		</section>
+		<section>
+			<div class="pic">
+				<ul class="slider">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<span id="p1">1</span>
+				<span id="p2">2</span>
+				<span id="p3">3</span>
+			</div>
+		</section>
+	</body>
+</html>
